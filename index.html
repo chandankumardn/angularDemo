@@ -42,6 +42,7 @@
      </div>
 
      <div class="wel" ng-controller="keyguysCotroller">
+     <p>{{msg}}</p>
       <input type="text" class="form-control" ng-model="search">
         <div class="clearFix" style="clear:both"></div>
         <div class="col-md-6 col-sm-6 alert alert-success" ng-repeat="key in keyguys | filter:search">

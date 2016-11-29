@@ -120,6 +120,7 @@ app.directive('playInformation',function(){
 });
 
 app.controller('keyguysCotroller',function($scope,$http){
+    $scope.msg = "Hello Mr. Rayapati";
     $http.get('http://reqres.in/api/users?page=2').success(function(response){
         $scope.keyguys=response.data;
     });
