@@ -1,0 +1,9 @@
+<div class="panel panel-warning" ng-class='(play.show==false)? "panel panel-warning" : "panel panel-danger"'>
+	<div class="panel-heading">
+		<h4>{{play.name}}</h4>
+	</div>
+	<div class="panel-body">
+		<p>Director:<span class="badge">{{play.direction}}</span></p>
+		<button class="btn btn-primary btn-sm" ng-show="play.show">NEW SHOW</button>
+	</div>
+</div>

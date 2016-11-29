@@ -1,0 +1,8 @@
+.play-pills{
+	margin-bottom:10px;
+	    background: rgb(51, 122, 183);
+}
+.play-pills li a{color:#fff;border-radius: 0px;}
+.play-pills li a:hover{color:rgb(51, 122, 183)!important;}
+.play-pills li.active a{color:rgb(51, 122, 183);background:#fff;}
+.play-pills li.active a:hover{color:#fff!important;}

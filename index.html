@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="vasp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+     
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>MyWebApp</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="container">
+      <div class="row" ng-controller="navController">
+        <ul class="nav nav-pills play-pills">
+         <li ng-class="{active: isActive('/')}"><a href="#/">Home</a></li>
+         <li ng-class="{active: isActive('/about')}"><a href="#/about">About</a></li>
+         <li ng-class="{active: isActive('/play')}"><a href="#/play">Plays</a></li>
+         <li ng-class="{active:  isActive('/join')}"><a href="#/join">Join</a></li>
+
+       </ul>
+      </div>
+     <div class="row">
+      <div ng-view></div>
+     </div>
+
+     
+     <div ng-controller="dirController">
+             <hello-world></hello-world>
+     </div>
+
+     <div class="wel" ng-controller="keyguysCotroller">
+      <input type="text" class="form-control" ng-model="search">
+        <div class="clearFix" style="clear:both"></div>
+        <div class="col-md-6 col-sm-6 alert alert-success" ng-repeat="key in keyguys | filter:search">
+          <p>{{key.id}}<span class="badge"></p>
+          <p>{{key.first_name}}</p>
+        </div>
+         
+     </div>
+  </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

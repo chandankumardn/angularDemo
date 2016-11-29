@@ -1,0 +1,1 @@
+<strong>This is template from external</strong>
